@@ -1,0 +1,39 @@
+Who Is The Artist Who Have Most Album?
+
+
+SELECT Artist.Name , count(Album.ArtistId) "Number of Album"
+FROM Album
+JOIN Artist on Album.ArtistId=Artist.ArtistId
+GROUP by Artist.Name 
+ORDER by "Number of Album" DESC 
+LIMIT 10;
+
+Which Customer is on Top For Buying Music
+
+SELECT (Customer.FirstName || " " || Customer.LastName) AS CustomerName,
+sum(Invoice.total) AS total
+ FROM Invoice
+  INNER JOIN Customer on Invoice.CustomerId=Customer.CustomerId
+   GROUP by CustomerName 
+    ORDER by total DESC
+     LIMIT 5;
+ 
+
+
+Which one is the Top 5 Media Type Format Used?
+
+SELECT MediaType.Name, COUNT (Track.MediaTypeId) AS Total
+ FROM Track
+ JOIN MediaType on Track.MediaTypeId=MediaType.MediaTypeId
+  GROUP by MediaType.Name
+   ORDER by total
+    DESC LIMIT 5;
+
+
+Which Employee Is Most Supportive?
+
+SELECT (Employee.FirstName || " " || Employee.LastName) AS EmployeeName,
+ COUNT(Customer.CustomerId) AS "Number Of Customer"
+  FROM Employee
+   JOIN Customer ON Employee.EmployeeId=Customer.SupportRepId
+    GROUP BY EmployeeName;
