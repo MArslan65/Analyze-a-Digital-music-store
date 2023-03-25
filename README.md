@@ -1,4 +1,4 @@
-# Query a Digital Music Store Database
+# Analyze a Digital music store database and Optimize the business Strategies
  In this project, I query the Chinook Database. The Chinook Database holds information about a music store. For this project, i assist the Chinook team with understanding the media in their store, their customers and employees, and their invoice information. Need to pulled The data to build a visual (bar chart, histogram, or another plot) and answers the questions that present inormations
 
  ## I need to answer 4 questions
